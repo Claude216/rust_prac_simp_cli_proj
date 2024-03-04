@@ -25,3 +25,24 @@ fn list_tasks(tasks: &mut Vec<Task>) {
     }
 }
 
+// remove a task with a given id
+fn remove_task(tasks: &mut Vec<Task>, id: usize) -> bool {
+
+
+
+    if let Some(index) // if there is a match, index will be the first element in the 
+                       // task list that matches the condition; otherwise, it returns 'None'
+    = 
+    tasks.iter() // create a new iterator over vector 'tasks'
+    .position // called on the iterator, returns 'true' or 'false depending on whether the 
+              // element satisfies the condition
+    (|task| // take a reference   
+         task.id == id) {
+        tasks.remove(index);
+        true
+    } else {
+        false
+    }
+}
+
+
