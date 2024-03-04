@@ -12,10 +12,12 @@ fn main() {
     let mut tasks: Vec<Task> = Vec::new();
 
     loop {
+        println!("=================================================================");
         println!("1: Add A Task");
         println!("2: List Tasks");
         println!("3: Remove A Task");
         println!("Q: Exit");
+        println!();
 
         let mut choice = String::new();
         io::stdin().read_line(&mut choice).expect("Failed to read line");
@@ -59,6 +61,8 @@ fn add_task(tasks: &mut Vec<Task>, content: String) {
 
 // list all the tasks in the task list (by printing on the console)
 fn list_tasks(tasks: & Vec<Task>) {
+    println!();
+    println!("Task List:");
     for task in tasks {
         println!("{}: {}", task.id, task.content);
     }
