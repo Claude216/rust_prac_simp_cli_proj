@@ -1,0 +1,1 @@
+# rust_prac_simp_cli_proj
